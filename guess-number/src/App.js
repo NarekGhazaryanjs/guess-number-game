@@ -5,6 +5,7 @@ import Input from './Components/Input/Input';
 import Text from './Components/Text/Text';
 import Wrapper from './Components/ui/Wrapper/Wrapper';
 import Card from './Components/ui/Card/Card';
+import classes from './Components/ui/Global.module.css'
 
 const App = () => {
   const coinRef = useRef('');
@@ -29,18 +30,30 @@ const App = () => {
 
   return (
      <Wrapper>
-      <Card>
+      <Card className={classes.block}>
+      <Card className={classes.container}>
         <Text> your balance {balance} </Text>
       </Card>
-      <Card>
+      <Card className={classes.container}>
+        <Card>
          <Text> please bet money </Text>
          <Input propsRef={coinRef} placeholder='coin'  type='number'/>
-         <Text> Please choose number between 1 and 10 </Text>
-         <Input propsRef={numberRef} placeholder='number choose' type='number' />
-         <Button onClick={betHandler}> Bet </Button>
+        </Card>
+        <Card>
+          <Text> Please choose number between 1 and 10 </Text>
+          <Input propsRef={numberRef} placeholder='number choose' type='number' />
+          <Button onClick={betHandler}> Bet </Button>
+        </Card>
+        
+        
+          
+       
+         
       </Card>
-      <Card>
+      <Card className={classes.container}>
         <Text> computer random number {computerRandomNumber} </Text>
+      </Card>
+              
       </Card>
      </Wrapper>
   )

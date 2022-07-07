@@ -3,3 +3,26 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+
+
+button {
+  padding: 16px;
+  background-color: black;
+  border: 1px solid grey;
+  color: white;
+  width: 80%;
+  margin: 6px;
+  border-radius: 8px;
+}
+
+button:hover {
+  background-color: rgb(246, 200, 200);
+  border: 1px solid black;
+  color: black;
+  cursor: pointer;
+}
+
+input {
+  padding: 12px;
+}
