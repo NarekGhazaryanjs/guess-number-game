@@ -1,7 +1,7 @@
 const Input = (props) => {
-const {propsRef,onChange,placeholder,className} = props;
+const {type, propsRef,onChange,placeholder,className} = props;
   return (
-    <input  onChange={onChange} ref={propsRef} placeholder={placeholder} className={className} />
+    <input type={type}  onChange={onChange} ref={propsRef} placeholder={placeholder} className={className} />
   )
 }
 
